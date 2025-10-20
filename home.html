@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Consumption Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('C:/Users/liyak/Downloads/windmill3.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+            margin: 50px auto;
+        }
+        h2 {
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        label {
+            font-weight: bold;
+            color: #333333;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #cccccc;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2><u>Electricity Price Prediction</u></h2>
+    <br><br>
+    <form action="/predict" method="post">
+        <label for="Day">Day:</label>
+        <input type="text" id="Day" name="Day"><br>
+        
+        <label for="Month">Month:</label>
+        <input type="text" id="Month" name="Month"><br>
+        
+        <label for="SystemLoadEA">System Load EA:(KW)</label>
+        <input type="text" id="SystemLoadEA" name="SystemLoadEA"><br>
+        
+        <label for="SMPEA">SMPEA:(Dollar)</label>
+        <input type="text" id="SMPEA" name="SMPEA"><br>
+        
+        <label for="ORKTemperature">ORK Temperature:(°C)</label>
+        <input type="text" id="ORKTemperature" name="ORKTemperature"><br>
+        
+        <label for="ORKWindspeed">ORK Windspeed:(mph)</label>
+        <input type="text" id="ORKWindspeed" name="ORKWindspeed"><br>
+        
+        <label for="CO2Intensity">CO2 Intensity:(gCO2/kWh)</label>
+        <input type="text" id="CO2Intensity" name="CO2Intensity"><br>
+        
+        <label for="ActualWindProduction">Actual Wind Production:(kWh)</label>
+        <input type="text" id="ActualWindProduction" name="ActualWindProduction"><br>
+        
+        <label for="ForecastWindProduction">Forecast Wind Production: (kWh)</label>
+        <input type="text" id="ForecastWindProduction" name="ForecastWindProduction"><br>
+        
+        <label for="SystemLoadEP2">System Load EP2:(kW)</label>
+        <input type="text" id="SystemLoadEP2" name="SystemLoadEP2">
+        <br><br>
+        <br><br>
+        <input type="submit" value="Predict">
+    </form>
+    </center>
+</body>
+</html>
